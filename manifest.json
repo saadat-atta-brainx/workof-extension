@@ -1,0 +1,30 @@
+{
+    "name": "One Field Selection",
+    "version": "1.0",
+    "description": "Select input field",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {},
+    "permissions": [
+        "declarativeContent",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "jquery-3.4.1.min.js","popper.min.js","bootstrap.min.js","content.js"
+            ],
+            "css" : ["bootstrap.css"]
+        }
+    ],
+    "web_accessible_resources": ["pointer-hand.jpg","fontawesome/*"],
+    "manifest_version": 2
+}

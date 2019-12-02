@@ -1,0 +1,145 @@
+<style>
+    .popup-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: auto;
+        color: white;
+        font-size: 11px;
+        z-index: 2147483640;
+    }
+
+    .popup-container .form-control {
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .popup-container .custom-checkbox {
+        padding-left: 0px;
+    }
+
+    .popup-container .form-group select,
+    .popup-container .form-group label,
+    .popup-container .form-check label,
+    .popup-container .form-group select option {
+        color: white;
+        font-weight: bolder;
+    }
+
+    .popup-container .form-group input
+
+    /* .popup-container .form-check input { */
+        {
+        color: black;
+        background: white;
+    }
+
+    /* .popup-container .form-check input{
+        width: 15px;
+        height: 15px;
+    } */
+
+    .popup-container .form-group img#popupProductImage {
+        height: 100px;
+        max-height: 100px;
+    }
+
+    .selection-border {
+        box-shadow: rgb(101, 153, 204) 0px 0px 5px inset;
+    }
+
+    .text-small {
+        font-size: 11px;
+    }
+
+    .notes-container textarea#productNotes {
+        resize: none;
+        min-height: 8em;
+        text-align: left;
+    }
+
+    .popup-container .input-group-text {
+        align-items: flex-end;
+        background: white;
+    }
+</style>
+
+<div class="popup-container container pt-5 bg-dark">
+
+    <form>
+        <div class="form-group">
+            <select class="form-control-sm bg-dark text-small w-100">
+                <option>Select Project or Catalog</option>
+                <option>Project 1</option>
+                <option>Project 2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="productTitle">Product Name</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control text-small" id="productTitle" placeholder="Text Field" value="">
+                <div class="input-group-append field-selector" data-targetid="productTitle" data-type="text">
+                    <span class="input-group-text" id="basic-addon1"><i class="far fa-hand-point-up"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="productTitle">Price</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control text-small" id="productPrice" placeholder="Text Field" value="">
+                <div class="input-group-append field-selector" data-targetid="productPrice" data-type="number">
+                    <span class="input-group-text" id="basic-addon1"><i class="far fa-hand-point-up"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="productTitle">Color</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control text-small" id="productColor" placeholder="Text Field" value="">
+                <div class="input-group-append field-selector" data-targetid="productColor" data-type="text">
+                    <span class="input-group-text" id="basic-addon1"><i class="far fa-hand-point-up"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="popupProductImage">Main Image</label>
+            <div class="input-group mb-3 field-selector" data-targetid="popupProductImage" data-type="image">
+                <img id="popupProductImage" class="img-fluid w-100" alt="Product Popup Image" height="100px">
+            </div>
+        </div>
+
+        <div class="form-group notes-container">
+            <label for="productTitle">Notes</label>
+            <div class="input-group mb-3">
+                <textarea type="text" class="form-control text-small" id="productNotes" placeholder="Text Field"
+                    value="" rows="2" aria-label="productNotes"></textarea>
+                <div class="input-group-append field-selector" data-targetid="productNotes" data-type="text">
+                    <span class="input-group-text" id="basic-addon1"><i class="far fa-hand-point-up"></i></span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="productCatalog">
+            <label class="custom-control-label text-small" for="productCatalog">Add to Product Catalog</label>
+        </div>
+
+    </form>
+    <div aria-live="polite" aria-atomic="true" style="position: fixed; top: 0; left: 50%; z-index: 2147483647;">
+        <div id="popupContainerToast" class="toast fade hide bg-secondary" role="alert" aria-atomic="true"
+            data-delay="2000">
+            <div class="toast-header">
+                <strong class="mr-auto">Workof</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body"></div>
+        </div>
+    </div>
+</div>
